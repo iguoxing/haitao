@@ -1,0 +1,7 @@
+[2017-11-09 14:30:38][debug] begin notify
+[2017-11-09 14:30:38][debug] call back data:{"appid":"wx41379de397f80022","attach":"\u62fc\u56e2\u5c0f\u7a0b\u5e8f\u652f\u4ed8","bank_type":"CFT","cash_fee":"1","fee_type":"CNY","is_subscribe":"N","mch_id":"1234268302","nonce_str":"4owksnbprr44njm5rb1rsr3vgbb8aqr3","openid":"ogdgh0Xr9yQaYfEcp6kxqK8Jh5H8","out_trade_no":"50e20171109224344","result_code":"SUCCESS","return_code":"SUCCESS","sign":"AF1E2ECF73E6F48159A4CFD16D485780","time_end":"20171109143037","total_fee":"1","trade_type":"JSAPI","transaction_id":"4200000012201711093462864839"}
+[2017-11-09 14:30:38][debug] order_id:50
+[2017-11-09 14:30:38][debug] change_order_goods_storage0
+[2017-11-09 14:30:38][debug] change_order_goods_storage1:ok
+[2017-11-09 14:30:38][debug] change_order_state:ok
+[2017-11-09 14:30:38][debug] order_paid:50e20171109224344

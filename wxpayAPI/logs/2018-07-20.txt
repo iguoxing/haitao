@@ -1,0 +1,35 @@
+[2018-07-20 01:06:12][debug] begin notify
+[2018-07-20 01:06:12][debug] call back data:{"appid":"wx1bdf47082a621bc3","attach":"\u62fc\u56e2\u6d4b\u8bd5\u5c0f\u7a0b\u5e8f\u652f\u4ed8","bank_type":"CFT","cash_fee":"1","fee_type":"CNY","is_subscribe":"N","mch_id":"1243665202","nonce_str":"5h6avpu64k9cwuby5zdufxg8ueo3hdtu","openid":"o7ksA0ekbz8j7OU2yvWemfq1GJiA","out_trade_no":"285e20180720091922","result_code":"SUCCESS","return_code":"SUCCESS","sign":"279DD122837B79D4F441E9DFA0D76D52","time_end":"20180720010611","total_fee":"1","trade_type":"JSAPI","transaction_id":"4200000119201807207955386531"}
+[2018-07-20 01:06:12][debug] order_id:285
+[2018-07-20 01:06:12][debug] change_order_goods_storage0
+[2018-07-20 01:06:12][debug] change_order_goods_storage1:ok
+[2018-07-20 01:06:12][debug] change_order_state:ok
+[2018-07-20 01:06:12][debug] order_paid:285e20180720091922
+[2018-07-20 10:04:54][debug] begin notify
+[2018-07-20 10:04:54][debug] call back data:{"appid":"wx1bdf47082a621bc3","attach":"\u62fc\u56e2\u6d4b\u8bd5\u5c0f\u7a0b\u5e8f\u652f\u4ed8","bank_type":"CFT","cash_fee":"1","fee_type":"CNY","is_subscribe":"N","mch_id":"1243665202","nonce_str":"u9flg5if1y4w4tadyxykqo9k92w0wje5","openid":"o7ksA0RAoB3dx3iHrTygfWtGvnr4","out_trade_no":"287e20180720181808","result_code":"SUCCESS","return_code":"SUCCESS","sign":"4A48C1A2FB6E500C7553FEF980985627","time_end":"20180720100452","total_fee":"1","trade_type":"JSAPI","transaction_id":"4200000125201807203698944447"}
+[2018-07-20 10:04:54][debug] order_id:287
+[2018-07-20 10:04:54][debug] change_order_goods_storage0
+[2018-07-20 10:04:54][debug] change_order_goods_storage1:ok
+[2018-07-20 10:04:54][debug] change_order_state:ok
+[2018-07-20 10:04:54][debug] order_paid:287e20180720181808
+[2018-07-20 10:28:20][debug] begin notify
+[2018-07-20 10:28:20][debug] call back data:{"appid":"wx1bdf47082a621bc3","attach":"\u62fc\u56e2\u6d4b\u8bd5\u5c0f\u7a0b\u5e8f\u652f\u4ed8","bank_type":"CFT","cash_fee":"1","fee_type":"CNY","is_subscribe":"N","mch_id":"1243665202","nonce_str":"z7sqhzhwbd2sjoq4kawi3ur74klm33cp","openid":"o7ksA0TGHVnkAw1_ysbAnYrBXOZE","out_trade_no":"292e20180720184134","result_code":"SUCCESS","return_code":"SUCCESS","sign":"7D8238585AE02AD334639505131636A9","time_end":"20180720102818","total_fee":"1","trade_type":"JSAPI","transaction_id":"4200000134201807204976784060"}
+[2018-07-20 10:28:20][debug] order_id:292
+[2018-07-20 10:28:20][debug] change_order_goods_storage0
+[2018-07-20 10:28:20][debug] change_order_goods_storage1:ok
+[2018-07-20 10:28:20][debug] change_order_state:ok
+[2018-07-20 10:28:20][debug] order_paid:292e20180720184134
+[2018-07-20 17:11:10][debug] begin notify
+[2018-07-20 17:11:10][debug] call back data:{"appid":"wx1bdf47082a621bc3","attach":"\u62fc\u56e2\u6d4b\u8bd5\u5c0f\u7a0b\u5e8f\u652f\u4ed8","bank_type":"CFT","cash_fee":"1","fee_type":"CNY","is_subscribe":"N","mch_id":"1243665202","nonce_str":"u54niupl7hhcodgw1iv8v1paw53s96pi","openid":"o7ksA0ekbz8j7OU2yvWemfq1GJiA","out_trade_no":"312e20180721012410","result_code":"SUCCESS","return_code":"SUCCESS","sign":"8321405B7304A2B14E20880856D89F0F","time_end":"20180720171109","total_fee":"1","trade_type":"JSAPI","transaction_id":"4200000116201807208293659641"}
+[2018-07-20 17:11:10][debug] order_id:312
+[2018-07-20 17:11:10][debug] change_order_goods_storage0
+[2018-07-20 17:11:10][debug] change_order_goods_storage1:ok
+[2018-07-20 17:11:10][debug] change_order_state:ok
+[2018-07-20 17:11:10][debug] order_paid:312e20180721012410
+[2018-07-20 17:46:53][debug] begin notify
+[2018-07-20 17:46:53][debug] call back data:{"appid":"wx1bdf47082a621bc3","attach":"\u62fc\u56e2\u6d4b\u8bd5\u5c0f\u7a0b\u5e8f\u652f\u4ed8","bank_type":"CFT","cash_fee":"1","fee_type":"CNY","is_subscribe":"N","mch_id":"1243665202","nonce_str":"v0yh7br3lxppspqpsle7z80be39f1mev","openid":"o7ksA0ekbz8j7OU2yvWemfq1GJiA","out_trade_no":"315e20180721015950","result_code":"SUCCESS","return_code":"SUCCESS","sign":"E851386424FC071F5A6CBE061D61287C","time_end":"20180720174652","total_fee":"1","trade_type":"JSAPI","transaction_id":"4200000118201807207509964538"}
+[2018-07-20 17:46:53][debug] order_id:315
+[2018-07-20 17:46:53][debug] change_order_goods_storage0
+[2018-07-20 17:46:53][debug] change_order_goods_storage1:ok
+[2018-07-20 17:46:53][debug] change_order_state:ok
+[2018-07-20 17:46:53][debug] order_paid:315e20180721015950

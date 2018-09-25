@@ -1,0 +1,7 @@
+[2018-05-28 18:25:07][debug] begin notify
+[2018-05-28 18:25:07][debug] call back data:{"appid":"wx1bdf47082a621bc3","attach":"\u62fc\u56e2\u6d4b\u8bd5\u5c0f\u7a0b\u5e8f\u652f\u4ed8","bank_type":"CMB_DEBIT","cash_fee":"1","fee_type":"CNY","is_subscribe":"N","mch_id":"1243665202","nonce_str":"ydsc7i9pxkh2rw4dpdm2gq6qc4wzk17j","openid":"o7ksA0WKa00w9e9js5pUv4yNgE6k","out_trade_no":"224e20180529023813","result_code":"SUCCESS","return_code":"SUCCESS","sign":"919880518B14C5F1EB9D45D068FA02D0","time_end":"20180528182506","total_fee":"1","trade_type":"JSAPI","transaction_id":"4200000129201805283141207023"}
+[2018-05-28 18:25:07][debug] order_id:224
+[2018-05-28 18:25:07][debug] change_order_goods_storage0
+[2018-05-28 18:25:07][debug] change_order_goods_storage1:ok
+[2018-05-28 18:25:07][debug] change_order_state:ok
+[2018-05-28 18:25:07][debug] order_paid:224e20180529023813

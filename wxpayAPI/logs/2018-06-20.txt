@@ -1,0 +1,7 @@
+[2018-06-20 16:28:13][debug] begin notify
+[2018-06-20 16:28:13][debug] call back data:{"appid":"wx1bdf47082a621bc3","attach":"\u62fc\u56e2\u6d4b\u8bd5\u5c0f\u7a0b\u5e8f\u652f\u4ed8","bank_type":"CFT","cash_fee":"1","fee_type":"CNY","is_subscribe":"N","mch_id":"1243665202","nonce_str":"pc1odneyufcozpusp7zcd78pj7refsmu","openid":"o7ksA0ekbz8j7OU2yvWemfq1GJiA","out_trade_no":"243e20180621004103","result_code":"SUCCESS","return_code":"SUCCESS","sign":"45DFDDD055DCF82A4D12DD593B74BC9E","time_end":"20180620162812","total_fee":"1","trade_type":"JSAPI","transaction_id":"4200000132201806201815221756"}
+[2018-06-20 16:28:13][debug] order_id:243
+[2018-06-20 16:28:13][debug] change_order_goods_storage0
+[2018-06-20 16:28:13][debug] change_order_goods_storage1:ok
+[2018-06-20 16:28:13][debug] change_order_state:ok
+[2018-06-20 16:28:13][debug] order_paid:243e20180621004103
