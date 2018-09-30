@@ -550,6 +550,10 @@ function action_order_list()
     	if ($order_info['order_status'] != 2 && $order_info['order_status'] != 3 && $order_info['order_status'] != 4 && $order_info['pay_status'] == 2 && $order_info['shipping_status'] == 2) {
     		$orders[$key]['is_ok'] = 1;
     	}
+
+        //物流单号
+        $sql="SELECT invoice_no from ".$GLOBALS['ecs']->table('delivery_order')." WHERE order_id='{$orders[$key]['order_id']}'";
+        $orders[$key]['invoice_no']=$GLOBALS['db']->getOne($sql);
     }
 
     $res = array('err'=>0,'orders'=>$orders,'pager'=>$pager);
