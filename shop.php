@@ -92,6 +92,70 @@ function action_index(){
 
 	}
 
+    //正在进行的拼团
+    $sql="SELECT o.order_id,o.team_sign FROM ".$GLOBALS['ecs']->table('order_info')." AS o WHERE o.extension_code='team_goods' AND o.team_status=1 ORDER BY o.order_id ASC LIMIT 0,20";
+    $buying_list = $GLOBALS['db']->getAll($sql);
+
+    $systime = gmtime();//当前时间
+    $team_suc_time = $GLOBALS['_CFG']['team_suc_time'] * 86400;//团购限时-总秒数
+
+    foreach($buying_list as $key =>$value){
+        $order_id_tmp = $buying_list[$key]['order_id'];
+        $temp_team_sign = $buying_list[$key]['team_sign'];
+
+        //查询商品名称，商品图片，数量，价格
+        $sql = "SELECT g.goods_id,g.goods_name,g.goods_thumb,g.little_img,g.team_num,g.team_price FROM ".$GLOBALS['ecs']->table('order_goods')." AS o,".$GLOBALS['ecs']->table('goods')." AS g WHERE o.order_id='$order_id_tmp' AND o.goods_id=g.goods_id";
+        $buying_list[$key]['goods_info'] = $GLOBALS['db']->getAll($sql);
+
+        if(!$buying_list[$key]['goods_info'][0]['goods_thumb']){
+            $buying_list[$key]['goods_info'][0]['goods_thumb']='http://'.$GLOBALS['xcx_config']['url'].'/xcx/images/no-pic.jpg';
+        }else{
+            $buying_list[$key]['goods_info'][0]['goods_thumb']='http://'.$GLOBALS['xcx_config']['url'].'/'.$buying_list[$key]['goods_info'][0]['goods_thumb'];
+        }
+
+        if (!$buying_list[$key]['goods_info'][0]['little_img']) {
+            $buying_list[$key]['goods_info'][0]['little_img'] = 'http://'.$GLOBALS['xcx_config']['url'].'/xcx/images/no-pic.jpg';
+        }else {
+            $buying_list[$key]['goods_info'][0]['little_img'] ='http://'.$GLOBALS['xcx_config']['url'].'/'.$buying_list[$key]['goods_info'][0]['little_img'];
+        }
+
+        //参团的人
+        $sql="select u.user_name,u.uname,u.uname,u.headimgurl,u.headimg,o.pay_time,o.team_first,o.is_lucker from ".$GLOBALS['ecs']->table('order_info')." as o left join ".$GLOBALS['ecs']->table('users')." as u on o.user_id=u.user_id where team_sign=".$temp_team_sign." order by order_id ";
+        $temp_team_mem=$GLOBALS['db']->getAll($sql);
+        $buying_list[$key]['team_mem']=$temp_team_mem;
+
+        //参团倒计时
+        if ($temp_team_mem) {
+            foreach($temp_team_mem as $k=>$v)
+            {
+                $temp_team_mem[$k]['date']=local_date('Y-m-d H:i:s',$v['pay_time']);
+            }
+
+            $buying_list[$key]['team_start'] = $temp_team_mem[0]['pay_time'];//开团时间
+
+            // 限时剩余时间总秒数
+            if($temp_team_mem[0]['pay_time']){
+                $buying_list[$key]['s_miao'] = ($team_suc_time+$buying_list[$key]['team_start'])-$systime;
+            }else{
+                $buying_list[$key]['s_miao'] = 88888;
+            }
+
+        }
+
+        //缺几人
+        $sql=" SELECT count(*) FROM ".$GLOBALS['ecs']->table('order_info')." where team_sign=".$temp_team_sign." and team_status>0" ;
+        $count=$GLOBALS['db']->getOne($sql);
+
+        if($buying_list){
+            if($buying_list[$key]['goods_info']){
+                $buying_list[$key]['differ_num'] = $buying_list[$key]['goods_info'][0]['team_num']-$count;
+            }else{
+                $buying_list[$key]['differ_num']=0;
+            }
+        }
+
+    }
+
 
 	// 取得幻灯片
 
@@ -147,7 +211,7 @@ function action_index(){
 	$news = $GLOBALS['db']->getAll($sql);
 
 	
-	$res = array('err' => '0','best_list'=>$best_list,'flash_xml'=>$flash_xml,'mall_goods_list'=>$mall_goods_list,'cat_list'=>$cat_list,'news'=>$news,'miao_goods'=>get_promote_goods());
+	$res = array('err' => '0','best_list'=>$best_list,'flash_xml'=>$flash_xml,'mall_goods_list'=>$mall_goods_list,'cat_list'=>$cat_list,'news'=>$news,'miao_goods'=>get_promote_goods(),'buying_list'=>$buying_list);
 
 	exit(json_encode($res));
 	
