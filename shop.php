@@ -121,7 +121,7 @@ function action_index(){
         }
 
         //参团的人
-        $sql="select u.user_name,u.uname,u.uname,u.headimgurl,u.headimg,o.pay_time,o.team_first,o.is_lucker from ".$GLOBALS['ecs']->table('order_info')." as o left join ".$GLOBALS['ecs']->table('users')." as u on o.user_id=u.user_id where team_sign=".$temp_team_sign." order by order_id ";
+        $sql="select u.user_name,u.uname,u.uname,u.headimgurl,u.headimg,o.pay_time,o.team_first,o.is_lucker from ".$GLOBALS['ecs']->table('order_info')." as o left join ".$GLOBALS['ecs']->table('users')." as u on o.user_id=u.user_id where team_sign=".$temp_team_sign." AND team_status=1 order by order_id ";
         $temp_team_mem=$GLOBALS['db']->getAll($sql);
         $buying_list[$key]['team_mem']=$temp_team_mem;
 
