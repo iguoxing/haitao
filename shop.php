@@ -93,7 +93,8 @@ function action_index(){
 	}
 
     //正在进行的拼团
-    $sql="SELECT o.order_id,o.team_sign FROM ".$GLOBALS['ecs']->table('order_info')." AS o WHERE o.extension_code='team_goods' AND o.team_status=1 ORDER BY o.order_id ASC LIMIT 0,20";
+    $sql="SELECT o.order_id,o.team_sign FROM ".$GLOBALS['ecs']->table('order_info')." AS o WHERE o.extension_code='team_goods' AND o.team_status=1 Group BY o.team_sign ASC LIMIT 0,20";
+//    $sql="SELECT o.order_id,o.team_sign FROM ".$GLOBALS['ecs']->table('order_info')." AS o WHERE o.extension_code='team_goods' AND o.team_status=1 ORDER BY o.order_id ASC LIMIT 0,20";
     $buying_list = $GLOBALS['db']->getAll($sql);
 
     $systime = gmtime();//当前时间
